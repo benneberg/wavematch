@@ -582,7 +582,7 @@ const WaveClashGame: React.FC = () => {
 
   const renderMenu = () => {
     return (
-    <div className="max-w-md mx-auto pb-8 animate-in fade-in duration-500 relative">
+    <div className="max-w-md lg:max-w-4xl mx-auto pb-8 animate-in fade-in duration-500 relative">
       <LeaderboardOverlay isOpen={showLeaderboard} onClose={() => setShowLeaderboard(false)} />
       <InfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
       
@@ -596,7 +596,7 @@ const WaveClashGame: React.FC = () => {
       
       <div className="space-y-4 px-4">
         {/* Special Modes */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <button 
                 onClick={() => launchLevel(generateDailyLevel(), 'DAILY')}
                 className="bg-yellow-400 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
@@ -642,7 +642,7 @@ const WaveClashGame: React.FC = () => {
             </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <button 
                 onClick={() => setShowLeaderboard(true)}
                 className="p-3 border-4 border-black bg-gray-100 flex items-center justify-center gap-2 font-bold hover:bg-gray-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
@@ -661,6 +661,7 @@ const WaveClashGame: React.FC = () => {
         <div className="border-b-4 border-black my-4"></div>
         <h3 className="font-black text-lg px-2">CAMPAIGN</h3>
 
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {LEVELS.map((level) => (
           <button
             key={level.id}
@@ -678,13 +679,14 @@ const WaveClashGame: React.FC = () => {
             </div>
           </button>
         ))}
+        </div>
       </div>
     </div>
   )};
 
   const renderPlaying = () => (
     // Fixed height container to prevent body scroll, use 100dvh for mobile browsers
-    <div className="h-[100dvh] flex flex-col max-w-2xl mx-auto relative bg-gray-100 overflow-hidden">
+    <div className="h-[100dvh] flex flex-col max-w-2xl lg:max-w-6xl mx-auto relative bg-gray-100 overflow-hidden">
       <InfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
 
       <div className={`absolute inset-0 bg-green-500 z-50 pointer-events-none mix-blend-multiply transition-opacity duration-300 ${showFlash ? 'opacity-40' : 'opacity-0'}`} />
@@ -724,11 +726,11 @@ const WaveClashGame: React.FC = () => {
       </div>
 
       {/* Visualizer (Fixed) */}
-      <div id="canvas-area" className="relative w-full aspect-[2/1] bg-black border-b-4 border-black shrink-0 group z-10">
+      <div id="canvas-area" className="relative w-full aspect-[2/1] lg:aspect-[4/1] bg-black border-b-4 border-black shrink-0 group z-10">
         <canvas 
           ref={canvasRef} 
-          width={800} 
-          height={400}
+          width={1200} 
+          height={300}
           className="w-full h-full object-cover"
         />
         
@@ -758,11 +760,11 @@ const WaveClashGame: React.FC = () => {
 
       {/* Controls (Scrollable) */}
       <div 
-        className="flex-grow overflow-y-auto p-4 bg-gray-50 relative pb-32" 
+        className="flex-grow overflow-y-auto p-4 lg:p-8 bg-gray-50 relative pb-32" 
         id="controls-panel" 
         ref={controlsRef}
       >
-        <BCard className="shadow-sm">
+        <BCard className="shadow-sm lg:max-w-4xl lg:mx-auto">
            {/* Wave Shape Selector - HIDDEN IN SAMPLER CLASH */}
            {gameMode !== 'SAMPLER_CLASH' && (
                <div className="mb-6" id="control-wave">
@@ -810,7 +812,7 @@ const WaveClashGame: React.FC = () => {
                </div>
            )}
 
-           <div className="flex gap-4">
+           <div className="flex flex-col lg:flex-row gap-4">
                 <BSlider 
                     id="control-detune"
                     label="Fine Tune"
@@ -854,7 +856,7 @@ const WaveClashGame: React.FC = () => {
 
   const renderResult = (won: boolean) => (
      <div className={`flex flex-col items-center justify-center min-h-screen p-4 ${won ? 'bg-blue-600' : 'bg-red-600'} text-white animate-in zoom-in duration-300`}>
-        <BCard className="text-center max-w-md w-full !bg-black !text-white !border-white shadow-[16px_16px_0px_0px_rgba(0,0,0,0.5)]">
+        <BCard className="text-center max-w-md lg:max-w-2xl w-full !bg-black !text-white !border-white shadow-[16px_16px_0px_0px_rgba(0,0,0,0.5)]">
             {won ? <Trophy size={64} className="mx-auto mb-4 text-yellow-400" /> : <Skull size={64} className="mx-auto mb-4 text-red-500" />}
             
             <h2 className="text-4xl font-black mb-2 tracking-tighter">{won ? 'SYNCHRONIZED' : 'SIGNAL LOST'}</h2>
