@@ -3,7 +3,7 @@
 Master auditory perception. Sculpt sound. Match the signal.
 
 [**▶ Play the Game (Live Demo)**](#)
-*(Insert your GitHub Pages link here once deployed.)*
+*https://benneberg.github.io/wavematch/*
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Tech](https://img.shields.io/badge/built%20with-React%20%7C%20TypeScript%20%7C%20Web%20Audio%20API-black)
