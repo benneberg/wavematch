@@ -90,7 +90,7 @@ export const SamplerMenu: React.FC<SamplerMenuProps> = ({ onClose }) => {
 
                 <div className="space-y-6 flex-grow">
                     <div className="bg-black text-white p-4 font-mono text-sm border-4 border-blue-500 mb-6">
-                        <p className="mb-2">>> INSTRUCTIONS</p>
+                        <p className="mb-2">INSTRUCTIONS</p>
                         <ul className="list-disc pl-5 space-y-1">
                             <li>Record from Mic (max 2s) or Upload Audio File.</li>
                             <li>Click "USE AS WAVE" to assign a sound to the 'CUSTOM' wave slot.</li>
