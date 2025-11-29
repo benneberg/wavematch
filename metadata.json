@@ -1,0 +1,7 @@
+{
+  "name": "WaveMatch: Audio Puzzle Game",
+  "description": "A neo-brutalist audio synthesis puzzle game. Match the waveform visually and aurally to master the oscillator.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
