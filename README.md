@@ -1,5 +1,9 @@
 # WaveMatch: Audio Synthesis Puzzle
 
+<p align="center">
+  <img src="assets/logo.png" alt="WaveMatch logo" width="240"/>
+</p>
+
 Master auditory perception. Sculpt sound. Match the signal.
 
 [**▶ Play the Game (Live Demo)**](#)
@@ -9,11 +13,16 @@ Master auditory perception. Sculpt sound. Match the signal.
 ![Tech](https://img.shields.io/badge/built%20with-React%20%7C%20TypeScript%20%7C%20Web%20Audio%20API-black)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+<p align="center">
+  <img src="assets/screenshot1.png" alt="WaveMatch screenshot 1" width="480" />
+  <img src="assets/screenshot2.png" alt="WaveMatch screenshot 2" width="480" />
+</p>
+
 ---
 
 ## Overview
 
-**WaveMatch** is a neo-brutalist audio puzzle game that trains perception in waveform analysis and sound synthesis. Built directly on the Web Audio API without third-party audio libraries, the game challenges players to match a procedurally generated target signal using real-time manipulation of oscillators, gain, detuning, filters, and sampling.
+**WaveMatch** is a neo-brutalist audio puzzle game that trains perception in waveform analysis and sound synthesis. Built directly on the Web Audio API without third-party audio libraries, the gam[...]  
 
 WaveMatch combines education, intuition, and arcade-like pressure into a clean, modern audio-visual experience.
 
@@ -159,8 +168,7 @@ MIT License
 
 Copyright (c) 2025 Lukas Benneberg
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
@@ -168,7 +176,6 @@ furnished to do so, subject to the following conditions:
 
 [standard MIT text continues…]
 ```
-
 
 ---
 
